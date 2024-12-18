@@ -202,3 +202,8 @@ function resize(){
      td.style.height="50px";
  });
 }
+
+document.getElementById("home").addEventListener('click',function(){
+    location.href = "../../main/index.html";
+  });
+  

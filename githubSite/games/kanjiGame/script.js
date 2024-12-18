@@ -192,3 +192,7 @@ function clearTable(){
     }
 }
 
+document.getElementById("home").addEventListener('click',function(){
+    location.href = "../../main/index.html";
+  });
+

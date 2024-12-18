@@ -304,3 +304,7 @@ function title(){
 }
 title();
 setInterval(title,500);
+
+document.getElementById("home").addEventListener('click',function(){
+  location.href = "../../main/index.html";
+});

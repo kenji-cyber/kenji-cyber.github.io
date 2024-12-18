@@ -252,3 +252,7 @@ document.getElementById("capture").addEventListener("click", () => {
        
     });
 });
+
+document.getElementById("home").addEventListener('click',function(){
+    location.href = "../../main/index.html";
+  });

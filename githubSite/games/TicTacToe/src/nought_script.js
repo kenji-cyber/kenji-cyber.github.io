@@ -600,4 +600,6 @@ document.getElementById("O").addEventListener("click",function(){
   document.getElementById("section").style.display = "none";
 });
 
-
+document.getElementById("home").addEventListener('click',function(){
+  location.href = "../../../main/index.html";
+});

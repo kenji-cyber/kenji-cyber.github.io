@@ -215,3 +215,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
  });
+ document.getElementById("home").addEventListener('click',function(){
+    location.href = "../../main/index.html";
+  });
