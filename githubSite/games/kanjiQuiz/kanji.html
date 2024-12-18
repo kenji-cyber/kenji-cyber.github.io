@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- 検索エンジンに表示しない -->
+        <meta name="robots" content="noindex,nofollow" />
+        <title>漢字クイズ</title>
+        <link rel="icon" href="../../images/logo/gk_bar.png" sizes="16x16" type="image/png">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <!-- sweetalert2 -->
+        <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.all.min.js "></script>
+        <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.min.css " rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+  
+    <body id="body">
+        <a class="home-btn" onclick="window.location.href='../../main/index.html'">
+            <img id="home-img" src="../../images/other/home.png">
+         </a>
+            <h3 id="h1">0/0</h3>
+           <div class="startflame" id="startflame">
+            <h1>漢字クイズ</h1>
+            <button id="start" class="btn-glow btn-hover-shine">スタート！</button>
+           </div>
+
+        <div class="gameflame" id="gameflame">
+            <h2 id="question">この漢字は何と読む？</h2>
+            <h4 id="kanji">漢字</h4>
+        <table style="margin-top: 350px;">    
+          <tr> 
+           <td><button id="alternative1" class="btn" onclick="buttonClick()">かんじ</button></td>
+           <td><button id="alternative2" class="btn" onclick="buttonClick()">おとこじ</button></td>
+           <td><button id="alternative3" class="btn" onclick="buttonClick()">かんざ</button></td>
+           <td><button  id="alternative4" class="btn" onclick="buttonClick()">がんじ</button></td>
+          </tr>
+        </table>
+        </div>
+        <div class="correct-circle" id="circle">
+            <div class="checkmark"></div>
+        </div>
+        <div class="crossmark" id="cross"></div>
+ 
+    <script src="kanji.js"></script>
+    <!-- Option 1: bootstrap JS popper すべて含む -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!-- Option 2: ドロップダウン、ポップオーバー、ツールチップを使う予定がない場合 -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    -->
+    </body>
+</html>

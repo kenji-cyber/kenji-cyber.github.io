@@ -1,0 +1,172 @@
+body{
+    /*background-color: rgb(199, 226, 235);*/
+    background-color: black;
+}
+.bodybox{
+width: 300px;
+height: 300px;
+margin: 90px auto 0 auto;
+text-align: center;
+}
+.box{
+width: 200px;
+height: 50px;
+margin: -150px 150px 0 90px;
+text-align: center;
+}
+.title_box{
+width: 350px;
+height: 60px;
+border: solid 5px  white;
+background-color: black;
+margin: 0 150px 0 auto;
+text-align: center;
+}
+.boxcount{
+position: flex;
+
+width: 170px;
+height: 150px;
+border: solid 2px black;
+background-color: black;
+margin: 20px auto 0 500px;
+text-align: center;
+}
+
+h1{
+color: greenyellow;
+font-size: 40px;
+position: fixed;
+margin: 0 auto 0 auto;
+text-align: center;
+}
+h2{
+font-size: 50px;
+color: red;
+margin: 10 auto 0 auto;
+text-align: center;
+}
+h3{
+position: fixed;
+margin: 0 auto 0 auto;
+text-align: center;
+font-size: 40px;
+color:blue;
+}
+h4{
+position: fixed;
+margin: 0 auto 0 auto;
+text-align: center;
+font-size: 40px;
+color: lightgray;
+}
+h6{
+font-size: 20px;
+color: white;
+margin: 20px auto 0 500px;
+}
+.title{
+font-size: 40px;
+position: fixed;
+margin: 0 auto 80px auto;
+text-align: center;
+}
+.bbox{
+position: fixed;
+width: 500px;
+height: 110px;
+margin: -50px auto -150px -80px;
+}
+.button{
+margin-top: 20px;
+}
+#button1{
+position: fixed;
+border: solid 2px orange;
+background-color: orange;
+border-radius: 150px;
+width: 150px;
+height: 100px;
+font-size: 40px;
+margin-left: 40px;
+}
+#button1_1{
+position: fixed;
+border: solid 2px orange;
+background-color: orange;
+border-radius: 150px;
+width: 150px;
+height: 100px;
+font-size: 40px;
+margin-top: -24px;
+margin-left: -190px;
+}
+#button1:hover{
+background-color: lightsalmon;
+}
+#button1_1:hover{
+background-color: lightsalmon;
+}
+#button2{
+width: 100px;
+height: 50px;
+border: solid 5px red;
+background-color: yellow;
+font-size: 20px;
+
+}
+#button2:hover{
+background-color: lightgoldenrodyellow;
+}
+#timestart{
+color: aliceblue;
+margin-top: -150px;
+font-size: 90px;
+}
+#timestart:hover{
+color: red;
+}
+.text{
+display: none;
+visibility: hidden;
+}
+.pbox{
+width: 350px;
+height: 20px;
+margin: 100px auto 20px auto;
+}
+.timerout{
+position: fixed;
+margin: 0 auto 0 auto;
+text-align: center;
+border: solid 2px white;
+background-color: blue;
+width: 300px;
+height: 20px;
+
+}
+.progress{
+position: fixed;
+margin: 0 auto 0 auto;
+text-align: center;
+border: solid 2px white;
+background-color:red;
+width: 0;
+height: 20px;
+}
+.home-btn{
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    background-color: lightgray;
+    border-radius: 100px;
+    align-items: center;
+    top: 2%;
+    left: 2%;
+}
+#home-img{
+    display: flex;
+    width:30px; 
+    height:30px;
+    margin: 0 auto;
+}

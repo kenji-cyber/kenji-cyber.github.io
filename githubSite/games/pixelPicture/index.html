@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="icon" href="../../images/logo/gk_bar.png" sizes="16x16" type="image/png">
+        <!-- 検索エンジンに表示しない -->
+        <meta name="robots" content="noindex,nofollow" />
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <title>pixel paint</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+  
+    <body>
+        <a class="home-btn" onclick="window.location.href='../../main/index.html'">
+            <img id="home-img" src="../../images/other/home.png">
+          </a>
+        <div id="display">
+                <div id="picture">
+                    <div id="types">
+                        <button type="button" class="btn-type" id="collapse">collapse</button>
+                        <button type="button" class="btn-type" id="spacing-0">spacing-0</button>
+                        <button type="button" class="btn-type" id="spacing-1">spacing-1</button>
+                        <div id="CaptureImage">
+                            <button id="capture">Capture as Image</button>
+                            <div id="output"></div>
+                            </div>
+            
+                    </div>
+                    <div id="contentImage">
+                    <table id="pictureTable">
+                    </table>
+                   </div>
+                 
+                </div>
+                <div id="properties">
+                    <h3>Properties</h3>
+                    <div id="size">
+                        <h4>sizes</h4>
+                        <div style="display: flex; align-items: center; text-align: center;">
+                        <input id="width" type="number" value="36" > X <input id="height" type="number" value="36" >
+                        </div>
+                        <button type="button" id="resize">change</button>
+                    </div>
+                    <div id="paint">
+                        <h4>pincels</h4>
+                        <div style="display: flex;">
+                        <img src="images/pen.png" id="pen">
+                        <img src="images/pincel.png" id="pincel">
+                        </div>
+                    </div>
+                    <div id="colors">
+                        <h4>colors</h4>
+                        <table id="colorsTable" cellspacing="5">
+                        </table>
+
+                    </div>
+                   
+
+                </div>
+        </div>
+ 
+    <script src="script.js"></script>
+   
+    </body>
+</html>

@@ -1,0 +1,81 @@
+body{
+    display: flex;
+    justify-content: center; /* 横方向の中央揃え */
+    align-items: center; /* 縦方向の中央揃え */
+    height: 100vh; /* ビューポートの高さを100%に設定 */
+    margin: 0; /* デフォルトの余白を削除 */
+    background-color: black;
+    }
+    button{
+      position: fixed;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+  border-radius: 5px;
+  width: 250px;
+  height: 100px;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: [object object];
+  background-image: linear-gradient(90deg, rgba(247, 238, 12, 1) 5%, rgba(255, 151, 29, 1) 26%, rgba(233, 94, 52, 1) 45%, rgba(154, 39, 238, 1) 64%, rgba(35, 102, 247, 1) 81%, rgba(88, 139, 250, 1) 95%);
+    }
+    button:hover{
+        opacity: .5;
+    }
+    table{
+        margin: 50px auto;
+        border: none;
+    }
+    #table td{
+        width: 70px;
+        height: 70px;
+        border: none;
+        border-radius: 10px;
+    }
+    #table td:hover{
+        cursor: pointer;
+    }
+    #count{
+        position: fixed;
+        margin: -300px 1000px 0 auto;
+        color: white;
+        font-size: 80px;
+    }
+    h1{
+       display: none ;
+       position: fixed;
+       color: white;
+       font-size: 80px;
+    }
+    #time{
+        visibility: hidden;
+        position: fixed;
+        margin: -300px auto 0 1000px;
+        color: yellow;
+        font-size: 80px;
+
+    }
+    #countDown{
+        visibility: hidden;
+        position: fixed;
+        color: red;
+        font-size: 100px;
+
+    }
+    .home-btn{
+        position: fixed;
+        width: 36px;
+        height: 36px;
+        background-color: lightgray;
+        border-radius: 100px;
+        align-items: center;
+        top: 2%;
+        left: 2%;
+    }
+    #home-img{
+        display: flex;
+        width:30px; 
+        height:30px;
+        margin: 0 auto;
+    }
