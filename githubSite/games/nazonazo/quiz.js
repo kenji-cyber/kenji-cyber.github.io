@@ -157,11 +157,11 @@ function finish(){
     let d = maru/idx;
     if(d >= 0.6){
         document.getElementById("h1").style.color = "blue";
-        document.getElementById("body").style.backgroundImage = "url(images/happy.jpg)";
+        document.getElementById("body").style.backgroundColor = "yellow";
        
     }else{
         document.getElementById("h1").style.color = "red";
-        document.getElementById("body").style.backgroundImage = "url(images/zanen.jpeg)";
+        document.getElementById("body").style.backgroundColor = "#00008b";
     }
     document.getElementById("h1").style.display="flex";
   

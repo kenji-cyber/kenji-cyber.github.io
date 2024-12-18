@@ -159,10 +159,8 @@ function buttonClick(e) {
             let score = (maru / countGame) * 100;
             if (score >= 60) {
                 h1.style.color = "rgb(87, 172, 225)";
-                body.style.backgroundImage = "url(images/happy.jpg)";
             } else {
                 h1.style.color = "rgb(225, 87, 87)";
-                body.style.backgroundImage = "url(images/zanen.jpeg)";
             }
             h1.style.display = "flex";
             countUp();
