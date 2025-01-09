@@ -44,6 +44,8 @@ h3{
     border-collapse: collapse; /* セル間の隙間を消去 */
     margin: 18% auto;
     border: none;
+    user-select: none;
+  
 }
 
 #table td{
