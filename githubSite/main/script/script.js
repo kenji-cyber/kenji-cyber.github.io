@@ -1,5 +1,10 @@
 const games = [
     {
+        name:"Get the sequence right",
+        image:"GetTheSequenceRight.png",
+        url:"../games/numbers/index.html"
+    },
+    {
         name:"Pixel Paint",
         image:"pixelpaint.png",
         url:"../games/pixelPicture/index.html"

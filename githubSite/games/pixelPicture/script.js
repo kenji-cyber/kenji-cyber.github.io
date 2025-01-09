@@ -38,6 +38,7 @@ function makeTableColor(){
         }
         colorsTable.appendChild(row);
     }
+    document.getElementById("color0-0").style.border = "2px solid blue";
 }
 var pictureI = 36;
 var picturej = 36;
@@ -56,8 +57,8 @@ function makeTablePicture(){
         pictureTable.appendChild(row);
     }
 }
-let paintcolor = null;
-var beforecolorid = "";
+let paintcolor = "#000000";
+var beforecolorid = "color0-0";
 function colorClick(){
     for(let i = 0; i < colorI; i++ ){
         for(let j = 0; j < colorj; j++){
@@ -66,10 +67,10 @@ function colorClick(){
             color.addEventListener('click',function(){
                 if(beforecolorid == ""){
                     beforecolorid = id;
-                    color.style.border =" 2px solid blue";
+                    color.style.border ="2px solid blue";
                 }else{
-                    document.getElementById(beforecolorid).style.border =" 2px solid black";
-                    color.style.border =" 2px solid blue";
+                    document.getElementById(beforecolorid).style.border ="2px solid black";
+                    color.style.border ="2px solid blue";
                     beforecolorid = id;
                 }
                 paintcolor = color.style.backgroundColor;
@@ -108,7 +109,7 @@ function pixelClick(){
                         pixel.style.backgroundColor = paintcolor;
                   
                 }else{
-                    alert("色が選んでいないです");
+                    alert("choose color");
                 }
                
             })
@@ -153,28 +154,37 @@ document.getElementById("resize").addEventListener('click',()=>{
     rePj = document.getElementById("height").value;
     resizeTable();
 })
+var collapseWidth = 70;
+var collapseHeight = 47;
+
+var spacing0Width = 75;
+var spacing0Height = 44;
+
+var spacing1Width = 65;
+var spacing1Height = 39;
+
 function resizeTable(){
     pictureTableoff();
     pictureI = rePi;
     picturej  = rePj;
     if(box == "collapse"){
-        if( pictureI > 47 || picturej > 95){
-            alert("サイズオーバー");
-            pictureI = 47;
-            picturej = 40;
+        if( pictureI > collapseHeight || picturej > collapseWidth){
+            alert("sizes over");
+            pictureI = collapseHeight;
+            picturej = collapseWidth;
         }
     }else if(box == "spacing-0"){
-        if( pictureI > 44 || picturej > 90){
-            alert("サイズオーバー");
-            pictureI = 44;
-            picturej = 36;
+        if( pictureI > spacing0Height || picturej > spacing0Width){
+            alert("sizes over");
+            pictureI = spacing0Height;
+            picturej = spacing0Width;
            
         }
     }else if(box == "spacing-1"){
-        if( pictureI > 39 || picturej > 79){
-            alert("サイズオーバー");
-            pictureI = 39;
-            picturej = 36;
+        if( pictureI > spacing1Height || picturej > spacing1Width){
+            alert("sizes over");
+            pictureI = spacing1Height;
+            picturej = spacing1Width;
            
         }
     }
@@ -186,27 +196,36 @@ function resizeTable(){
     pixelClick();
 }
 
+var collapseI = 40;
+var collapseJ = 40;
+
+var spacing0I = 36;
+var spacing0J = 36;
+
+var spacing1I = 36;
+var spacing1J = 36;
+
 document.getElementById("collapse").addEventListener('click',()=>{
   box = "collapse";
   pictureTable.style.borderCollapse = "collapse";
-  rePi = 40;
-  rePj = 40;
+  rePi = collapseI;
+  rePj = collapseJ;
   resizeTable();
 })
 document.getElementById("spacing-0").addEventListener('click',()=>{
     box = "spacing-0";
     pictureTable.style.borderCollapse = "separate";
     pictureTable.style.borderSpacing = "0";
-    rePi = 36;
-    rePj = 36;
+    rePi = spacing0I;
+    rePj = spacing0J;
     resizeTable();
 })
 document.getElementById("spacing-1").addEventListener('click',()=>{
     box = "spacing-1";
     pictureTable.style.borderCollapse = "separate";
     pictureTable.style.borderSpacing = "2px";
-    rePi = 36;
-    rePj = 36;
+    rePi = spacing1I;
+    rePj = spacing1J;
     resizeTable();
 })
 
