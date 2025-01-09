@@ -59,3 +59,19 @@ h3{
 #table td:hover{
     cursor: pointer;
 }
+.home-btn{
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    background-color: lightgray;
+    border-radius: 100px;
+    align-items: center;
+    top: 2%;
+    left: 2%;
+}
+#home-img{
+    display: flex;
+    width:30px; 
+    height:30px;
+    margin: 0 auto;
+}

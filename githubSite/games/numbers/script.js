@@ -261,3 +261,6 @@ document.getElementById("start").addEventListener("click",()=>{
     setTimeout(makeTable,2000);
 });
 
+document.getElementById("home").addEventListener('click',function(){
+    location.href = "../../main/index.html";
+  });
