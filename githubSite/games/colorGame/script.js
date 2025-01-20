@@ -23,7 +23,9 @@ const colors = [["#ffffe0","#fffacd"],
                 ["#fff8dc","#f5f5dc"],
                 ["#8b008b","#800080"],
                 ["#191970","#000080"],
-                ["#f5fffa","#f0ffff"]];
+                ["#f5fffa","#f0ffff"],
+                ["#ff00ff","#ff00ff"],
+                ["#7cfc00","#7fff00"]];
 var maxCnt = colors.length;
 function arrayChange(){
     for(let i = 0; i < colors.length; i++){

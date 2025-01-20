@@ -39,8 +39,17 @@ a {
     height: 30px;
     margin-top: 170px;
 }
+#logo{
+    width: 450px;
+    height: 250px;
+}
 #searchBox{
     width: 200px;
     height: 40px;
     margin-left: 35%;
+}
+
+#timer{
+    font-size: 20px;
+    margin-right: 65%;
 }
