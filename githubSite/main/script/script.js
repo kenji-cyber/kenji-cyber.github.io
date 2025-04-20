@@ -1,5 +1,10 @@
 const games = [
     {
+        name:"multiTermo",
+        image:"multiTermo.png",
+        url:"../games/multiTermo/index.html"
+    },
+    {
         name:"Get the sequence right",
         image:"GetTheSequenceRight.png",
         url:"../games/numbers/index.html"
