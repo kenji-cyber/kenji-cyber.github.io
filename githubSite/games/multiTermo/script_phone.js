@@ -769,7 +769,7 @@ function painel(){
         button.id = linguage[i];
         button.style.border = "2px black solid";
         button.style.borderRadius = "10px";
-        button.style.width ="125px";
+        button.style.width ="130px";
         button.style.height ="40px";
         button.type = "button";
         button.className ="button-linguage";
