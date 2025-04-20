@@ -35,7 +35,8 @@ const words_English = [
     "PRAZO", "QUERO", "ROLAR", "SUBIR", "TENSO", "SONHO", "VALER", "ZEBRA", "ALUNO", "BATER",
     "CORPO", "DESTA", "ESFOR", "FELIZ", "FILHO", "FILHA", "CARRO", "POMBO", "CARPA", "VEADO",
     "GOLFE", "ALUNA", "GALHO", "RITMO", "VIGOR", "SABER", "VIVER", "PEDRA", "TARDE", "FICAR",
-    "VEZES", "JULHO", "PRATO"
+    "VEZES", "JULHO", "PRATO", "AMIGO", "PODAR", "AREIA", "AVISO", "BANHO", "BOLSO", "ANZOL",
+    "BURRO", "CABRA", "TERRA", "CASAL", "CHAVE", "FRUTA", "HOMEM"
   ];
   const sakana = [
     "あいなめ", "あおうお", "あおがい", "あかいか", "あかえび", "あまだい",
