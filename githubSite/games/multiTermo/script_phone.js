@@ -20,23 +20,23 @@ const words_English = [
     "MOIST", "NIFTY", "OCCUR", "PRIDE", "QUACK", "ROUGH", "SMILE", "THORN", "UNZIP", "VAULT",
     "FALSE", "TITLE"
   ];
-  const words_Portuguese = [
+    const words_Portuguese= [
     "ABACO", "BANCO", "CEGAR", "DENTE", "EXATO", "FUGIR", "GOSTO", "ROSTO", "IDEAL", "JOGAR",
     "KOALA", "LUZIR", "MISTO", "NOBRE", "OUSAR", "PROSA", "QUERO", "RISCO", "SUTIL", "TURVO",
-    "URDIR", "VELOZ", "XAMPU", "JOGAR", "ZINCO", "AMIDO", "BERRO", "CASAL", "DADOS", "CHATO",
-    "EXAME", "FALHO", "GABAR", "HONRA", "ISOLA", "JANTA", "KENDO", "LIMPO", "MODAL", "NUVEM",
-    "ODIAR", "PUXAR", "QUASE", "ROUPA", "SONAR", "TORRE", "ULTRA", "VINIL", "ZELAR", "VIGOR",
-    "BRISA", "CHUVA", "DROGA", "ETAPA", "FESTA", "GRATO", "HOTEL", "INVES", "JUSTO", "PLENA",
+    "URDIR", "VELOZ", "XAMPU", "YOGAR", "ZINCO", "AMIDO", "BERRO", "CASAL", "DADOS", "CHATO",
+    "EXAME", "FALHO", "GABAR", "HONRA", "ISOLA", "JANIO", "KENDO", "LIMPO", "MODAL", "NUVEM",
+    "ODIAR", "PUXAR", "QUASE", "ROUPA", "SONAR", "TORRE", "ULTRA", "VINIL", "ZELAR", "ACENO",
+    "BRISA", "CHUVA", "DROGA", "ETAPA", "FESTA", "GRATO", "HOTEL", "INVES", "JUSTO", "TERMO",
     "LIVRO", "MASSA", "NARIZ", "OSTRA", "PARDO", "QUEDA", "RIVAL", "SALTO", "TIGRE", "TEMPO",
     "VAPOR", "ZUMBI", "ATIVO", "BLOCO", "CARTA", "DORES", "ECOAR", "FIXAR", "GANHO", "CONTA",
     "INATO", "JUNHO", "KARMA", "LENTO", "MORAR", "NEGRO", "OLEOS", "PENTE", "QUOTA", "RADAR",
     "SOPRO", "TRAPO", "URUBU", "VERBO", "ZELOS", "ANTES", "BANAL", "CINTO", "DUELO", "ESQUI",
-    "FALAR", "GOSTO", "IDEAL", "JUNTA", "MEXER", "LINDO", "MATAR", "BARCO", "OUTRO",
+    "FALAR", "GOSTO", "HASTE", "IDEAL", "JUNTA", "FILME", "LINDO", "MATAR", "BARCO", "OUTRO",
     "PRAZO", "QUERO", "ROLAR", "SUBIR", "TENSO", "SONHO", "VALER", "ZEBRA", "ALUNO", "BATER",
     "CORPO", "DESTA", "ESFOR", "FELIZ", "FILHO", "FILHA", "CARRO", "POMBO", "CARPA", "VEADO",
-    "GOLFE", "ALUNA", "GALHO", "VIGOR", "RITMO", "SABER", "VIVER", "PEDRA", "TARDE", "FICAR",
-    "VEZES", "JULHO"
-
+    "GOLFE", "ALUNA", "GALHO", "RITMO", "VIGOR", "SABER", "VIVER", "PEDRA", "TARDE", "FICAR",
+    "VEZES", "JULHO", "PRATO", "AMIGO", "PODAR", "AREIA", "AVISO", "BANHO", "BOLSO", "ANZOL",
+    "BURRO", "CABRA", "TERRA", "CASAL", "CHAVE", "FRUTA", "HOMEM"
   ];
   const sakana = [
     "あいなめ", "あおうお", "あおがい", "あかいか", "あかえび", "あまだい",
