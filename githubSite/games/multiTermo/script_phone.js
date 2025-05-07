@@ -1,113 +1,13 @@
 const alphabet = [["Q","W","E","R","T","Y","U","I","O","P"],
                    ["A","S","D","F","G","H","J","K","L"],
                    ["Z","X","C","V","B","N","M"]];
-const alphabet_JP = [["あ", "い", "う", "え", "お", "か", "き", "く","け","こ"],
-                     ["さ", "し","す","せ","そ","た", "ち", "つ", "て","と","な","に"],
+const alphabet_JP = [["あ", "い", "う", "え", "お", "か", "き", "く","こ"],
+                     ["さ", "し","す","た", "ち", "つ", "て","と","な","に"],
                      [ "ま", "み", "め", "や", "ら","り","る","ろ","が","ぎ"],
-                     ["ご","じ","だ","ど", "び", "ぼ","ん","ー"]
+                     ["ご","じ","だ", "び", "ぼ","ん","ー"]
                   ];
   
-const words_English = [
-    "APPLE", "BRAVE", "CANDY", "DELTA", "EAGLE", "FANCY", "GIANT", "HAPPY", "IVORY", "JOKER",
-    "KNEEL", "LUCKY", "MAGIC", "NOBLE", "OCEAN", "PIANO", "QUIET", "RAVEN", "SHINE", "TIGER",
-    "ULTRA", "VIVID", "WHALE", "XENON", "YOUTH", "ZEBRA", "ANGEL", "BEACH", "CLIMB", "DREAM",
-    "EVENT", "FLAME", "GRAPE", "HOUSE", "IMAGE", "JELLY", "KARMA", "LEMON", "MANGO", "NERDY",
-    "ORBIT", "PAINT", "QUEEN", "ROBOT", "SUGAR", "TRACK", "UNDER", "VOCAL", "WRIST", "XEROX",
-    "YIELD", "ZESTY", "AMBER", "BLAZE", "CRISP", "DRIFT", "EMBER", "FLOOD", "GLOBE", "HINGE",
-    "INFER", "JAUNT", "KIOSK", "LUNAR", "MINOR", "NUDGE", "OXIDE", "PEARL", "QUILT", "RISKY",
-    "SPIKE", "TREND", "UNTIE", "VIGOR", "WRATH", "XYLEM", "YOUNG", "ZONAL", "ALERT", "BLOOM",
-    "COUCH", "DIZZY", "EQUIP", "FROST", "GLOOM", "HASTE", "IDEAL", "JUMPS", "KNACK", "ROYAL",
-    "MOIST", "NIFTY", "OCCUR", "PRIDE", "QUACK", "ROUGH", "SMILE", "THORN", "UNZIP", "VAULT",
-    "FALSE", "TITLE"
-  ];
-  const words_Portuguese= [
-    "SAGAZ", "TERMO", "NEGRO", "MEXER", "NOBRE", "SENSO", "AFETO", "ALGOZ", "PLENA", "FAZER", 
-    "ASSIM", "SOBRE", "VIGOR", "PODER", "SUTIL", "FOSSE", "SANAR", "CERNE", "IDEIA", "AUDAZ", 
-    "MORAL", "INATO", "DESDE", "MUITO", "JUSTO", "SONHO", "HONRA", "TORPE", "AMIGO", "ETNIA", 
-    "ANEXO", "DENGO", "TANGE", "HAVER", "LAPSO", "EXPOR", "TEMPO", "SEARA", "SABER", "CASAL", 
-    "XIBIU", "ARDIL", "DIZER", "PESAR", "ESTAR", "DEVER", "CAUSA", "SENDO", "TENAZ", "AINDA", 
-    "BRADO", "COSER", "CRIVO", "TEMOR", "GENRO", "POSSE", "COMUM", "PROLE", "ASSAZ", "CEDER", 
-    "CORJA", "PAUTA", "FUGAZ", "CENSO", "CULTO", "DIGNO", "ATROZ", "MUNDO", "FORTE", "VULGO", 
-    "MESMO", "GLEBA", "CRIAR", "COZER", "VALHA", "TODOS", "JEITO", "DENSO", "PUDOR", "DOGMA", 
-    "LOUCO", "REGRA", "ORDEM", "LIMBO", "FELIZ", "PEDIR", "HOMEM", "CLAVA", "IMPOR", "BANAL", 
-    "USURA", "ROUND", "AJUDA", "COISA", "FORMA", "LEGAL", "SERVO", "CERTO", "FALAR", "PROSA", 
-    "TENRO", "PRESA", "DESSE", "FALSO", "POSSO", "CUNHO", "VENDO", "DEVIR", "VIRIL", "ONTEM", 
-    "VALOR", "MANSO", "VISAR", "LINDA", "MEIGA", "PUDER", "ACASO", "GUISA", "FLUIR", "AFAGO", 
-    "LUGAR", "TEMER", "ABRIR", "GARBO", "PRAXE", "OBTER", "GERAR", "BURRO", "AFINS", "MATIZ", 
-    "CISMA", "BRUMA", "PLENO", "CRISE", "FLUXO", "SENIL", "RITMO", "HAVIA", "MORTE", "LEVAR", 
-    "ENFIM", "OLHAR", "TOMAR", "CASTA", "PRUMO", "BREGA", "PARVO", "OUVIR", "CABAL", "VITAL", 
-    "RELES", "FALTA", "BRAVO", "CALMA", "FAVOR", "OUTRO", "PARCO", "PULHA", "VIVAZ", "TECER", 
-    "RETER", "TERRA", "TENDO", "AMENO", "VIVER", "VALIA", "LAICO", "GRATO", "PASSO", "ACHAR", 
-    "CARMA", "POSSA", "REVER", "NICHO", "PAPEL", "POBRE", "NOSSA", "NOITE", "ROGAR", "PRIME", 
-    "FARDO", "FARSA", "ATIVO", "COESO", "FATOR", "SELAR", "ANELO", "CLARO", "SINTO", "SESTA", 
-    "LEIGO", "CITAR", "SONSO", "CESTA", "DETER", "ATUAR", "VELHO", "VAZIO", "GENTE", "HASTE", 
-    "ADIAR", "TENDE", "REVEL", "HUMOR", "FICAR", "IDEAL", "SULCO", "FONTE", "PONTO", "MARCO", 
-    "IGUAL", "VEMOS", "LABOR", "EXATO", "FEIXE", "AMPLO", "TERNO", "REMIR", "LAVRA", "TANTO", 
-    "HIATO", "CAPAZ", "CAUDA", "CICLO", "RELVA", "INATA", "JOVEM", "GESTO", "TENRA", "AMBOS", 
-    "CHUVA", "RAIVA", "TOADA", "POUCO", "SONSA", "IMUNE", "APOIO", "VELAR", "VIMOS", "ALGUM", 
-    "XEQUE", "HORDA", "FEITO", "LEITO", "ENTRE", "COESA", "CARRO", "SENTE", "PROBO", "MINHA", 
-    "DOIDO", "CRUEL", "TRAMA", "FRASE", "ANUIR", "SORTE", "BRISA", "LAZER", "VERSO", "CHATA", 
-    "RIGOR", "MASSA", "BOTAR", "PRECE", "MAIOR", "PEGAR", "DORSO", "SEITA", "SIGNO", "FAUNA", 
-    "FUROR", "PRESO", "COVIL", "CREDO", "LIVRO", "CASTO", "PLANO", "LIAME", "FLORA", "VETOR", 
-    "MORAR", "AGORA", "COMER", "PRAIA", "OCASO", "ADEUS", "SAIBA", "SENDA", "PECHA", "NUNCA", 
-    "PESTE", "FAINA", "HOUVE", "AMBAS", "SETOR", "MANHA", "ARDOR", "MUDAR", "PEIXE", "PARTE", 
-    "VISSE", "MESES", "REZAR", "ANTRO", "SALVO", "RISCO", "VULTO", "PAJEM", "BEATA", "BREVE", 
-    "VASTO", "JUNTO", "ACESO", "CAMPO", "MORRO", "AVARO", "GRUPO", "SINAL", "BANZO", "REGER", 
-    "ANTES", "PRADO", "ANDAR", "ANAIS", "LENDA", "CONTA", "SEGUE", "ACIMA", "BIRRA", "FUGIR", 
-    "CHULO", "VERBO", "MOTIM", "LEITE", "RAPAZ", "FESTA", "BRAVA", "TRETA", "FRUIR", "TEXTO", 
-    "PARAR", "TIRAR", "FITAR", "TRAGA", "PUXAR", "JAZIA", "REINO", "GERIR", "TENSO", "PRAZO", 
-    "ALUDE", "FILHO", "TOSCO", "NORMA", "PROVA", "TURBA", "EXAME", "CORPO", "PRETO", "VORAZ", 
-    "BANDO", "ACESA", "CHEIO", "ARCAR", "MALTA", "AONDE", "FATOS", "PSICO", "LIGAR", "NOSSO", 
-    "QUASE", "FATAL", "MAGIA", "VENAL", "CERTA", "PRAGA", "LOGRO", "DESSA", "LONGE", "QUOTA", 
-    "AFORA", "FIXAR", "APEGO", "MENTE", "POMPA", "MESSE", "COITO", "LIDAR", "ALADO", "SEXTA", 
-    "PERDA", "TOCAR", "SUMIR", "JIRAU", "CAIXA", "PARCA", "SOLDO", "FRACO", "TINHA", "LIVRE", 
-    "VERVE", "VEZES", "GLOSA", "APELO", "LINDO", "FIRME", "PORTA", "GRAVE", "SOLTO", "BATER", 
-    "OPACO", "ABRIU", "FAIXA", "ASTRO", "SALVE", "SABIA", "TURVA", "BESTA", "TRUPE", "FENDA", 
-    "ATUAL", "NAVIO", "SUPRA", "GRATA", "ELITE", "EXIJO", "PARDO", "DEIXA", "AUTOR", "PARVA", 
-    "PIQUE", "JUNCO", "VIRIA", "CURSO", "CIOSO", "BICHO", "DOUTO", "MACIO", "BIOMA", "DESTA", 
-    "FICHA", "RESES", "ALUNO", "COUSA", "CALDA", "POSTO", "ABUSO", "MENOS", "CHATO", "CABER", 
-    "JUDEU", "LOCUS", "CULPA", "SUPOR", "VERBA", "SUPER", "DROPS", "ZELAR", "GOSTO", "EXTRA", 
-    "SUAVE", "MOLHO", "ADVIR", "AGUDO", "TORSO", "BAIXO", "VOSSO", "VINHA", "FACHO", "PEITO", 
-    "TURMA", "LIGHT", "COMBO", "ASILO", "PASSA", "PIADA", "ESTIO", "TURVO", "PILAR", "FOREM", 
-    "CHAMA", "PISAR", "MOSTO", "AMENA", "MESMA", "BRABO", "POETA", "ERETO", "FINDA", "MUSEU", 
-    "MEIGO", "LOCAL", "LASSO", "MEDIR", "OPTAR", "SURJA", "FACTO", "TESTE", "BUSCA", "TENTO", 
-    "POEMA", "AUTOS", "DRAMA", "CORAL", "ROUCA", "RUMOR", "FOLGA", "AVISO", "CLIMA", "GERAL", 
-    "PAIRA", "COCHO", "HOBBY", "CALMO", "BOATO", "PEDRA", "URGIA", "IDOSO", "AMIGA", "CETRO", 
-    "FEUDO", "TACHA", "RUBRO", "FEROZ", "PACTO", "MONGE", "VOLTA", "CRIME", "GOLPE", "TETRA", 
-    "DAQUI", "PONHA", "CORSO", "RISTE", "NATAL", "CARTA", "ECOAR", "CASAR", "MANGA", "MONTE", 
-    "PLUMO", "CACHO", "VIGIA", "VERDE", "FALHA", "AROMA", "SALDO", "ITENS", "FAZIA", "CONTO", 
-    "BRIGA", "HOSTE", "TRIBO", "VETAR", "PASMO", "ESCOL", "GRAMA", "TARDE", "LETAL", "RIVAL", 
-    "CHEFE", "AMADA", "ROUPA", "CIVIL", "PENTA", "FRUTO", "VENHA", "VENTO", "ORNAR", "PEDRO", 
-    "PLAGA", "PLEBE", "SWING", "NUVEM", "SARAU", "AREIA", "TCHAU", "PINHO", "COVER", "LESSE", 
-    "CARGO", "VIRAR", "NESSE", "JOGAR", "MACRO", "BERRO", "FINJO", "ARADO", "STAND", "JEJUM", 
-    "AXILA", "SEIXO", "MAGNA", "FOSSO", "PERTO", "CATRE", "FARTA", "TIVER", "BEIJO", "ROCHA", 
-    "VAROA", "TROCA", "INTER", "BRUTA", "BRUTO", "DESTE", "TODAS", "TUTOR", "TRAJE", "CALOR", 
-    "RENDA", "TRATO", "ASSAR", "CLOSE", "GABAR", "POMAR", "PERCO", "VIRAM", "GURIA", "PORTE", 
-    "AMADO", "ESTRO", "SURTO", "TENHA", "NESSA", "VADIO", "ARFAR", "FEITA", "RURAL", "SANTO", 
-    "NESTA", "SILVO", "CANSO", "ODIAR", "DEPOR", "BAZAR", "FOSSA", "VISTA", "VEDAR", "LOGOS", 
-    "XUCRO", "LAUDO", "GROTA", "AVIAR", "PAVOR", "ETAPA", "NEGAR", "CHEIA", "CANTO", "IRADO", 
-    "MARCA", "CIFRA", "CENHO", "CHULA", "CERCA", "BOLSA", "DENSA", "SALMO", "FERPA", "CLERO", 
-    "MINAR", "CINTO", "VISTO", "BUCHO", "MECHE", "VAGAR", "COROA", "MOLDE", "BURRA", "SOFIA", 
-    "HORTO", "SEGAR", "URDIR", "LETRA", "LARGO", "PROTO", "QUAIS", "FOLHA", "PAIOL", "VELHA", 
-    "PENSO", "MORFO", "ESGAR", "PUGNA", "JAZER", "FINAL", "DERAM", "TRAGO", "PASMA", "NARCO", 
-    "FUNDO", "LESTO", "VASTA", "CEITA", "TROCO", "UFANO", "ARDIS", "QUEDA", "PODAR", "LINHA", 
-    "OLHOS", "PICHE", "APEAR", "FROTA", "MOCHO", "BULIR", "FOLIA", "VIGER", "NESTE", "ILESO", 
-    "PEITA", "OUTRA", "RESTO", "MANTO", "DISSO", "MATAR", "REDOR", "COSMO", "MONTA", "SEIVA", 
-    "FAROL", "BOLSO", "BARRO", "CHAVE", "CHAGA", "MOVER", "MISTO", "FALSA", "RETRO", "LOGIA", 
-    "LIMPO", "CULTA", "VAZIA", "BANTO", "JUSTA", "CAMPA", "NARIZ", "VELOZ", "LOUCA", "LUTAR", 
-    "MACHO", "LOURO", "BEDEL", "MIMAR", "SABOR", "PUNHA", "GEMER", "PORCA", "TOQUE", "AXIAL", 
-    "ARROZ", "ZUMBI", "LUCRO", "SAMBA", "ENJOO", "LONGO", "DADOS", "COEVO", "CALVO", "VENHO", 
-    "FINDO", "SALVA", "RENTE", "SUBIR", "FARTO", "URGIR", "BAIXA", "LOUSA", "DIABO", "FIRMA", 
-    "PAGAR", "SOLTA", "FAZES", "PLUMA", "TORNA", "OUSAR", "XAMPU", "VALER", "BRUXA", "FORRO", 
-    "SEXTO", "REPOR", "SIGLA", "RELER", "FUGIU", "GUETO", "CANIL", "LENTO", "CARDO", "BUGRE", 
-    "SACAR", "CORAR", "PULAR", "CORTE", "CUSTO", "FOCAR", "MANIA", "VERSA", "NESGA", "FEIRA", 
-    "SADIO", "FERIR", "MODAL", "BANCO", "CEGAR", "DENTE", "ROSTO", "KOALA", "QUERO", "AMIDO", 
-    "FALHO", "ISOLA", "SONAR", "TORRE", "DROGA", "HOTEL", "OSTRA", "SALTO", "TIGRE", "VAPOR", 
-    "BLOCO", "DORES", "GANHO", "JUNHO", "PENTE", "RADAR", "SOPRO", "TRAPO", "URUBU", "DUELO", 
-    "ESQUI", "JUNTA", "FILME", "BARCO", "ROLAR", "ZEBRA", "FILHA", "POMBO", "CARPA", "VEADO", 
-    "GOLFE", "ALUNA", "GALHO", "JULHO", "PRATO", "TIGRE", "FENDA", "CAVAL", "FREIO", "FREAR",
-    "AMIGO", "VELHO", "VELHA"
-  ];
+
   const sakana = [
     "あいなめ", "あおうお", "あおがい", "あかいか", "あかえび", "あまだい",
     "いいだこ", "いしがに", "いしだい", "うみうし", "あかえい", "おおぼら",
@@ -129,72 +29,7 @@ const words_English = [
   const fruits = [
     "あさいー","だいだい","ぼんたん","まんごー","いちじく","ここやし"
     ];
-var words_Japanese = [];
 
-const info_br = `<h2>Como jogar ?</h2>
-               <p> 1. Você precisa adivinhar a palavra.</p>
-
-               <p> 2. Você tem 6 tentativas por cada rodada.</p>
-
-               <p>  3. A cada tentativa, você escreve uma palavra de 5 letras.</p>
-
-               <h3> O jogo indica se as letras estão corretas:</h3>
-
-                <p> 4. 🟩 Verde: a letra está na posição correta.</p>
-
-                <p> 5. 🟨 Amarelo: a letra existe na palavra, mas está na posição errada.</p>
-
-                <p> 6. ⬜ Cinza: a letra não está na palavra.</p>
-
-                <p> 7. De acordo com que se acerta a palavra mais palavras são adicionadas a cada rodada.</p>
-
-                <p>8. Não precisa se preocupar com os acentos das palavras.</p>
-
-                <p> Use essas dicas para descobrir a palavra correta!</p>
-                `;
-const info_us = `<h2>How to play?</h2>
-                    <p>1. You need to guess the word.</p>
-
-                   <p>2. You have 6 attempts per round.</p>
-
-                    <p>3. Each attempt must be a 5-letter word.</p>
-
-                    <h3> The game tells you if the letters are correct:</h3>
-
-                    <p>4. 🟩 Green: the letter is in the correct position.</p>
-
-                    <p>5. 🟨 Yellow: the letter is in the word, but in the wrong position.</p>
-
-                    <p>6. ⬜ Gray: the letter is not in the word.</p>
-                    
-                    <p>7. As you guess the word correctly, more words are added in each round.</p>
-
-                    <p>Use these clues to find the correct word!</p>
-                `;
-const info_jp = `<h2>遊び方は？</h2>
-
-                    <p>1. 単語を当ててください。</p>
-
-                   <p>2. 各ラウンドに6回のチャンスがあります。</p>
-
-                    <p>3. 各回で4文字の単語を入力します。</p>
-
-                    <h3>ゲームは文字が正しいかどうかを教えてくれます：</h3>
-
-                    <p>4. 🟩 緑：文字も位置も正しい。</p>
-
-                    <p>5. 🟨 黄色：単語に文字があるが、位置が違う。</p>
-
-                    <p>6. ⬜ 灰色：その文字は含まれていません。</p>
-
-                    <p>7. 単語は（野菜、魚・貝、食べ物、フルーツ）に限っています（日本語バージョンのみ）。</p>
-
-                    <p>8. 正しい単語を当てると、次のラウンドでさらに多くの単語が追加されます。</p>
-
-                    <p>9. カタカナの単語をひらがなで入力すること。</p>
-
-                    <p>このヒントを使って正しい言葉を見つけましょう！</p>
-                `;
 
 const linguage = ["Portuguese","English","Japanese"]; 
 const keyboardCol = ["col-one","col-two","col-tree","col-four"];
@@ -209,7 +44,6 @@ var usedWord =[];
 var mainWord = [];
 var stageClear = 0;
 var checkStage = [];
-//ステージを設定
 var stage = 1;
 var wordsArray = [];
 var usedLinguage;
@@ -217,8 +51,8 @@ var sizecell = 25;
 var cellfont = 15;
 var flagInfoPainel = true;
 var flagHintPainel = true;
-let infos = info_br+info_us+info_jp;
-var type = [];
+let infos;
+var type =[];
 var retunlang = "return";
 function chooseWord(){
     mainWord = [];
@@ -290,7 +124,7 @@ function buttonHint(){
     hint.style.height = "45px";
     hint.id = "button-hint";
     hint.style.borderRadius = "40px";
-    hint.style.bottom = "5px";
+    hint.style.bottom = "18px";
     hint.style.left = "45%";
     hint.style.backgroundColor = "#BFFF00";
     hint.appendChild(h);
@@ -306,12 +140,10 @@ function makeKeyboard(){
     for(let i = 0; i < max; i++){
         const col = document.createElement(keyboardCol[i]);
         col.id = keyboardCol[i];
-        col.style.width = "320px";
-        col.style.height = "30px";
+        col.style.width = "88%";
+        col.style.height = "35px";
         col.className = "box";
-        if(usedLinguage != linguage[2]){
         col.style.marginLeft = `${rig}px`;
-        }
             for(let x = 0; x < mainAlphabet[i].length;x++){
                 let char = mainAlphabet[i][x];
                 const button = document.createElement("a");
@@ -345,7 +177,7 @@ function makeWordboard(){
        const information_button = document.getElementById("information");
        information_button.style.height = "45px";
        information_button.style.width = "45px";
-       information_button.style.top = "91%";
+       information_button.style.top = "90%";
     }else{
         sizecell -= 3;
         cellfont -= 2;
@@ -383,42 +215,27 @@ function removeTable(){
 }
 
 //ポルトガル語バージョン
-function portugueseGame(){
+async function portugueseGame(){
     const painel = document.getElementById("painel");
     painel.remove();
-    wordsArray = words_Portuguese;
+     wordsArray =   await loadInfomation("Portuguese");
     mainAlphabet = alphabet;
     startGame();
-
 }
 //英語バージョン
-function englishGame(){
+async function englishGame(){
     const painel = document.getElementById("painel");
     painel.remove();
-    wordsArray = words_English;
+    wordsArray = await loadInfomation("English");
     mainAlphabet = alphabet;
     startGame();
 }
 //日本語バージョン
-function japaneseGame(){
+async function japaneseGame(){
     const painel = document.getElementById("painel");
     painel.remove();
     row = 4;
-    for(let i = 0; i < tabemono.length;i++){
-        words_Japanese.push(tabemono[i]);
-    }
-    for(let i = 0; i < sakana.length;i++){
-        words_Japanese.push(sakana[i]);
-    }
-    for(let i = 0; i < yasai.length;i++){
-        words_Japanese.push(yasai[i]);
-    }
-    for(let i = 0; i < fruits.length;i++){
-        words_Japanese.push(fruits[i]);
-    }
-    
-
-    wordsArray = words_Japanese;
+    wordsArray =  await loadInfomation("Japanese");
     mainAlphabet = alphabet_JP;
     startGame();
 }
@@ -445,7 +262,7 @@ function createPainel(){
     if(!usedLinguage){
         const img = document.getElementById("img");
         img.style.left = "10px";
-        img.style.bottom = "10px";
+        img.style.bottom = "50px";
         img.style.transform = "rotate(0deg)";
         img.style.width = "100px";
         img.style.height = "100px";
@@ -491,6 +308,27 @@ function cancelPainel(){
     icon.src = "img/info.png";
 }
 
+async function loadInfo(lang) {
+    try {
+      const res = await fetch("game_data/data.json");
+      const data = await res.json();
+      infos = data[lang].info;
+    } catch (err) {
+      console.error("データの読み込みに失敗:", err);
+    }
+  }
+
+async function loadInfomation(lang) {
+    try {
+      const res = await fetch("game_data/data.json");
+      const data = await res.json();
+      infos = data[lang].info;
+      return await data[lang].words;
+    } catch (err) {
+      console.error("データの読み込みに失敗:", err);
+    }
+  }
+
 document.addEventListener("click",(e)=>{
     //クリックしたものIDを取得(IDからボタンの操作が行う)
     let ID =  e.target.id;
@@ -530,17 +368,14 @@ document.addEventListener("click",(e)=>{
     const img = document.getElementById("img");
     if(ID === linguage[0]){
         usedLinguage = linguage[0];
-        retunlang = "voltar";
         img.src = "img/multiTermo_BR.png";
         portugueseGame();
     }else if(ID === linguage[1]){
         usedLinguage = linguage[1];
-        infos = info_us+info_br+info_jp;
         img.src = "img/multiTermo_US.png";
         englishGame();
     }else if(ID === linguage[2]){
         usedLinguage = linguage[2];
-        infos = info_jp+info_us+info_br;
         img.src = "img/multiTermo_JP.png";
         retunlang  = "戻る";
         buttonHint();
@@ -670,28 +505,27 @@ document.addEventListener("click",(e)=>{
                         let arrayWord = word;
                         let arrayMainWord = mainWord[s-1];
                         let invalidChar = [];
+                        //場所が違うけど文字が合っています
+                        for(let i = 0; i < arrayWord.length;i++){
+                            for(let j = 0 ; j < arrayMainWord.length;j++){
+                                if(arrayWord[i] === arrayMainWord[j] && !invalidChar.includes(arrayWord[i])){
+                                    const char = document.getElementById(s+""+pointerIndex[1]+""+i);
+                                    char.style.background = "#ffff00";
+                                    char.style.color = "#000";
+                                    invalidChar.push(arrayMainWord[j]);
+                                    break;
+                                }
+                            }
+                           
+                        }
                         //場所と文字が当てます
                         for(let i = 0; i < arrayWord.length;i++){
-                          if(arrayWord[i] === arrayMainWord[i]){
-                              const char = document.getElementById(s+""+pointerIndex[1]+""+i);
-                              char.style.background = "#00ff7f";
-                              char.style.color = "#000";
-                              invalidChar.push(arrayWord[i]);
-                          }
-                      }
-                      //場所が違うけど文字が合っています
-                      for(let i = 0; i < arrayMainWord.length;i++){
-                          for(let j = 0 ; j < arrayWord.length;j++){
-                              if(arrayMainWord[i] === arrayWord[j] && !invalidChar.includes(arrayWord[j])){
-                                  const char = document.getElementById(s+""+pointerIndex[1]+""+j);
-                                  char.style.background = "#ffff00";
-                                  char.style.color = "#000";
-                                  invalidChar.push(arrayWord[j]);
-                                  break;
-                              }
-                          }
-                         
-                      }
+                            if(arrayWord[i] === arrayMainWord[i]){
+                                const char = document.getElementById(s+""+pointerIndex[1]+""+i);
+                                char.style.background = "#00ff7f";
+                                char.style.color = "#000";
+                            }
+                        }
 
                         const index = document.getElementById(pointerIndex);
                         index.style.border="2px black solid";
@@ -725,8 +559,6 @@ document.addEventListener("click",(e)=>{
                             chooseWord();
                         },1500);
                        
-                    }else{
-                        youWin();
                     }
                 }else{
                     if(flagkeyBoard){
@@ -781,43 +613,6 @@ function youlose(){
     painel.appendChild(btn);
     body.appendChild(painel);
 }
-function youWin(){
-    let hint = document.getElementById("button-hint");
-    if(hint){
-    hint.remove();
-    }
-    let info = document.getElementById("information");
-    if(info){
-        info.remove();
-    }
-    keyboard.style.display = "none";
-    wordboard.style.display ="none" ;
-    const body = document.getElementById("display");
-    const painel = document.createElement("div");
-    painel.id = "WinsPainel";
-    painel.style.border = "4px black solid";
-    painel.style.width ="300px";
-    painel.style.height ="200px";
-    painel.style.borderRadius = "20px";
-    painel.style.display = "inline-block";
-    painel.innerHTML = `<h2>YOU Wins !</h2><h3>Congratulations you is very smart !</h3>`;
-    painel.style.textAlign ="center";
-    painel.style.margin = "200px auto";
-    painel.style.background = "#BFFF00";
-    const btn = document.createElement("button");
-    btn.id = "return";
-    btn.style.border = "2px black solid";
-    btn.style.borderRadius = "10px";
-    btn.style.width ="70px";
-    btn.style.height ="40px";
-    btn.style.margin = "10px auto";
-    btn.innerHTML = retunlang;
-    btn.style.alignItems = "center";
-    btn.style.background = "#00FFFF";
-    painel.appendChild(btn);
-    body.appendChild(painel);
-}
-
 
 function painel(){
     const body = document.getElementById("display");
@@ -839,7 +634,7 @@ function painel(){
         button.id = linguage[i];
         button.style.border = "2px black solid";
         button.style.borderRadius = "10px";
-        button.style.width ="125px";
+        button.style.width ="120px";
         button.style.height ="40px";
         button.type = "button";
         button.className ="button-linguage";
@@ -854,8 +649,8 @@ function painel(){
 
 function startGame(){
     const img = document.getElementById("img");
-    img.style.left = "0px";
-    img.style.bottom = "0px";
+    img.style.left = "10px";
+    img.style.bottom = "10px";
     img.style.transform = "rotate(0deg)";
     img.style.width = "60px";
     img.style.height = "60px";
@@ -868,13 +663,18 @@ function startGame(){
 document.getElementById("home").addEventListener('click',function(){
     location.href = "../../main/index.html";
   });
-
 window.addEventListener("DOMContentLoaded", () => {
       painel();
-      const width = window.innerWidth;
-      const height = window.innerHeight;
+      const lang = navigator.language;
+      if (lang.startsWith("ja")) {
+        loadInfo("Japanese");
+      } else if (lang.startsWith("pt")) {
+       loadInfo("Portuguese");
+      } else{
+       loadInfo("English");
+      } 
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      console.log(width+" "+height);
+     
         if (!isMobile) {
             location.href = `index.html`;
         }

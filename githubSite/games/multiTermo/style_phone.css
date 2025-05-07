@@ -16,7 +16,7 @@ body{
 }
 #information{
     position: fixed;
-    right: 5px;       /*    distância da borda direita */
+    right: 10px;       /*    distância da borda direita */
     top: 5px;     /*   distância da borda inferior */
     width: 50px;
     height: 50px;
@@ -25,9 +25,7 @@ body{
     border-radius: 50px;
    
 }
-#information:hover{
-    background-color: #dcdcdc;
-}
+
 #icon-info{
     margin: 0 auto;
     padding-top: 11px;
@@ -59,10 +57,7 @@ table td{
     color: #fff;
     cursor: pointer;
 }
-table td:hover{
-    background-color: #dcdcdc;
-    color: #000;
-}
+
 .display-inline-block{
     display: inline-block;
     width: 150px;
@@ -73,23 +68,25 @@ table td:hover{
     background-color: #000;
 }
 #keyboard{
+    position: absolute;
     display: none;
-    width: 320px;
-    height: 150px;
+    width: 100%;
+    height: 100px;
     flex-wrap: wrap;
+    bottom: 20%;
 }
 .box{
     display: flex;
-    width: 320px;
-    height: 115px;
+    width: 100%;
+    height: 35px;
     flex-wrap: wrap;
     margin: 0 auto;
 }
 
 .button-key-char{
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
     padding-top: 3px;
     margin-left: 3px;
     font-size: 15px;
@@ -98,10 +95,7 @@ table td:hover{
     background: #dcdcdc;
     cursor: pointer;
 }
-.button-key-char:hover{
-    background: gray;
 
-}
 .enter-button{
     display: inline-block;
     width: 45px;
@@ -114,9 +108,7 @@ table td:hover{
     background: #dcdcdc;
     cursor: pointer;
 }
-.enter-button:hover{
-    background: gray;
-}
+
 .BackSpace-button{
     display: inline-block;
     width: 40px;
@@ -131,9 +123,7 @@ table td:hover{
     background: #dcdcdc;
     cursor: pointer;
 }
-.BackSpace-button:hover{
-    background: gray;
-}
+
 .home-btn{
     position: fixed;
     width: 36px;
