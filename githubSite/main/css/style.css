@@ -88,7 +88,7 @@ a{
         background-size: cover; /* ボックス全体にフィット */
         background-position: center; /* 中央に配置 */
         background-repeat: no-repeat; /* 繰り返しを防ぐ */
-        margin: 30px auto 0 30px;
+        margin: 30px auto 0 10px;
         color: #FF2ECC;
         overflow: auto;
     }
@@ -116,11 +116,8 @@ a{
     }
     #searchBox{
         position: fixed;
-        top: 15px;
-        right: 150px;
         width: 200px;
         height: 40px;
-        margin-left: 35%;
         background-color: #00FFFF;
         border: 5px solid #B026FF;
         border-radius: 1rem;
@@ -129,10 +126,9 @@ a{
     }
     #timer{
         position: fixed;
-        top: 60px;
-        right: 15px;
-        font-size: 15px;
-        margin-right: 65%;
+        top: 50px;
+        right: auto;
+        font-size: 25px;
         color: #00BFFF;
     }
   }
