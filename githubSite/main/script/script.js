@@ -88,11 +88,11 @@ searchBox.addEventListener("input", () => {
     });
 });
 var country = "JP";
-
 const timer = document.getElementById("timer");
 setInterval(()=>{
     let now = new Date();
-   timer.innerHTML = `${now.toLocaleString(country)}`;
+    let date = now.toLocaleString(country).slice(-8);
+   timer.innerHTML = `${date}`;
  
 },1)
 

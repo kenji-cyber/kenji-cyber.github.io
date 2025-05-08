@@ -59,6 +59,7 @@ a{
     background-color: #00FFFF;
     border: 5px solid #B026FF;
     border-radius: 1rem;
+    z-index: 1000px;
 
 }
 
@@ -66,7 +67,72 @@ a{
     position: fixed;
     top: 10px;
     left: 10px;
-    font-size: 20px;
-    margin-right: 65%;
+    font-size: 40px;
+    margin-right: 70%;
     color: #00BFFF;
 }
+
+@media (max-width: 600px) {
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 80px auto 0 auto;
+    }
+    .item{
+        position: relative;
+        width: 105px;
+        height: 110px;
+        border: solid 2px #EFFF00;
+        background-color: #696969;
+        border-radius: 9px;
+        background-size: cover; /* ボックス全体にフィット */
+        background-position: center; /* 中央に配置 */
+        background-repeat: no-repeat; /* 繰り返しを防ぐ */
+        margin: 30px auto 0 30px;
+        color: #FF2ECC;
+        overflow: auto;
+    }
+    .gametittle{
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(28, 28, 28, 0.6);
+       text-align: center;
+    }
+    a{
+        text-decoration: none;
+        color: #FF2ECC;
+        }
+        a:hover{
+            color: gold;
+        }
+    
+    #logo{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    #searchBox{
+        position: fixed;
+        top: 15px;
+        right: 150px;
+        width: 200px;
+        height: 40px;
+        margin-left: 35%;
+        background-color: #00FFFF;
+        border: 5px solid #B026FF;
+        border-radius: 1rem;
+        z-index: 1000px;
+    
+    }
+    #timer{
+        position: fixed;
+        top: 60px;
+        right: 15px;
+        font-size: 15px;
+        margin-right: 65%;
+        color: #00BFFF;
+    }
+  }
