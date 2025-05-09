@@ -65,8 +65,8 @@ a{
 
 #timer{
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 5px;
+    left: 15px;
     font-size: 40px;
     margin-right: 70%;
     color: #00BFFF;

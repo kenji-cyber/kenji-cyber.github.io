@@ -42,15 +42,10 @@ function makeTable(){
 }
 
 function resize(table){
-    if(row >= 7){
-        table.style.margin = "5% auto";
-    }else if(row >= 6){
-        table.style.margin = "10% auto";
-    }else if(row >= 4){
-        table.style.margin = "15% auto";
-    }else{
-        table.style.margin = "18% auto";
+    if(row >= 6){
+        table.style.margin = "1% auto";
     }
+   
 }
 
 function shuffle(){
