@@ -42,7 +42,7 @@ function makeTable(){
 }
 
 function resize(table){
-    if(row >= 6){
+    if(row >= 4){
         table.style.margin = "1% auto";
     }
    
