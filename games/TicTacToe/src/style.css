@@ -1,0 +1,480 @@
+body{
+    display: flex;
+    margin: 100px auto 0 auto;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    /* background-image: url("img/background.png");
+    background-repeat: no-repeat; */
+}
+/* タイトルここから */
+h1{
+    position: fixed;
+    margin-top: -320px;
+    margin-right: 515px;
+}
+.neonText {
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+  }
+.pulsate {
+    animation: pulsate 1.5s infinite alternate;     
+}
+@keyframes pulsate {
+    
+    100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    
+    }
+    
+    0% {
+  
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #0fa,
+      0 0 45px #0fa,
+      0 0 55px #0fa,
+      0 0 70px #0fa,
+      0 0 80px #0fa;
+  
+  }
+}
+/* タイトルここまで */
+ 
+section{
+    position: absolute;
+    width: 400px;
+}
+/* リセットボタンここから */
+.btn{
+    position: fixed;
+    width: 110px;
+    height: 45px;
+    background-color: black;
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #ffff00;
+    font-size: 15px;
+    color: #ffff00;
+    margin: 300px 750px 0 0;
+}
+.btn {
+    animation: btn 1.5s infinite alternate;     
+}
+@keyframes btn {
+    
+    100% {
+  
+        box-shadow:
+        0 0 4px #ffff00,
+        0 0 11px #ffff00,
+        0 0 19px #ffff00,
+        0 0 40px #ffd700,
+        0 0 80px #ffd700,
+        0 0 90px #ffd700,
+        0 0 100px #ffd700,
+        0 0 150px #ffd700;
+
+        text-shadow:
+        0 0 4px #ffff00,
+        0 0 11px #ffff00,
+        0 0 19px #ffff00,
+        0 0 40px #ffd700,
+        0 0 80px #ffd700,
+        0 0 90px #ffd700,
+        0 0 100px #ffd700,
+        0 0 150px #ffd700;
+
+    
+    }
+    
+    0% {
+  
+     box-shadow:
+     0 0 4px #ffff00,
+     0 0 11px #ffff00,
+     0 0 19px #ffff00,
+     0 0 40px #ffd700,
+     0 0 80px #ffd700,
+     0 0 90px #ffd700,
+     0 0 100px #ffd700,
+     0 0 150px #ffd700;
+
+
+      text-shadow:
+      0 0 4px #ffff00,
+      0 0 11px #ffff00,
+      0 0 19px #ffff00,
+      0 0 40px #ffd700,
+      0 0 80px #ffd700,
+      0 0 90px #ffd700,
+      0 0 100px #ffd700,
+      0 0 150px #ffd700;
+
+  
+  }
+}
+
+ /* リセットボタンここまで */
+
+/* 一対一ボタンここから */
+#b1{
+    display: inline;
+    width: 160px;
+    height: 70px;
+    background-color: transparent;
+    border: 3px solid #ff6347;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ff6347;
+}
+
+#b1 {
+    animation: b1 1.5s infinite alternate;     
+}
+@keyframes b1 {
+    
+    100% {
+  
+        box-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #ff6347,
+        0 0 80px #ff6347,
+        0 0 90px #ff6347,
+        0 0 100px #ff6347,
+        0 0 150px #ff6347;
+
+        text-shadow:
+        0 0 4px #ff0000,
+        0 0 11px #ff0000,
+        0 0 19px #ff0000,
+        0 0 40px #ff6347,
+        0 0 80px #ff6347,
+        0 0 90px #ff6347,
+        0 0 100px #ff6347,
+        0 0 150px #ff6347;
+    
+    }
+    
+    0% {
+  
+     box-shadow:
+      0 0 2px #ff0000,
+      0 0 4px #ff0000,
+      0 0 6px #ff0000,
+      0 0 10px #ff6347,
+      0 0 45px #ff6347,
+      0 0 55px #ff6347,
+      0 0 70px #ff6347,
+      0 0 80px #ff6347;
+
+      text-shadow:
+      0 0 4px #ff0000,
+      0 0 11px #ff0000,
+      0 0 19px #ff0000,
+      0 0 40px #ff6347,
+      0 0 80px #ff6347,
+      0 0 90px #ff6347,
+      0 0 100px #ff6347,
+      0 0 150px #ff6347;
+  
+  }
+}
+/* 一対一ボタンここまで */
+
+/* 人とロボットボタンここから */
+#b2{
+    display: inline;
+    width: 150px;
+    height: 70px;
+    margin-left: 20px;
+    background-color: black;
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 3px solid #4169e1 ;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #4169e1 ;
+}
+
+#b2 {
+    animation: b2 1.5s infinite alternate;     
+}
+@keyframes b2 {
+    
+    100% {
+  
+        box-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #4169e1,
+        0 0 80px #4169e1,
+        0 0 90px #4169e1,
+        0 0 100px #4169e1,
+        0 0 150px #4169e1;
+        text-shadow:
+        0 0 4px #0000ff,
+        0 0 11px #0000ff,
+        0 0 19px #0000ff,
+        0 0 40px #4169e1,
+        0 0 80px #4169e1,
+        0 0 90px #4169e1,
+        0 0 100px #4169e1,
+        0 0 150px #4169e1;
+    
+    }
+    
+    0% {
+  
+     box-shadow:
+      0 0 2px #0000ff,
+      0 0 4px #0000ff,
+      0 0 6px #0000ff,
+      0 0 10px #4169e1,
+      0 0 45px #4169e1,
+      0 0 55px #4169e1,
+      0 0 70px #4169e1,
+      0 0 80px #4169e1;
+      text-shadow:
+      0 0 4px #0000ff,
+      0 0 11px #0000ff,
+      0 0 19px #0000ff,
+      0 0 40px #4169e1,
+      0 0 80px #4169e1,
+      0 0 90px #4169e1,
+      0 0 100px #4169e1,
+      0 0 150px #4169e1;
+  
+  }
+}
+/* 一対一ボタンここまで */
+
+/* プライマリーボタンここから */
+.b3{
+    display: inline;
+    width: 160px;
+    height: 60px;
+    background-color: transparent;
+    border: 3px solid #ff6347;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #ff6347;
+}
+
+.b3 {
+    animation: b3 1.5s infinite alternate;     
+}
+@keyframes b3 {
+    
+    100% {
+  
+        box-shadow:
+        0 0 4px #ff0000,
+        0 0 11px #ff0000,
+        0 0 19px #ff0000,
+        0 0 40px #ff6347,
+        0 0 80px #ff6347,
+        0 0 90px #ff6347,
+        0 0 100px #ff6347,
+        0 0 150px #ff6347;
+
+        text-shadow:
+        0 0 4px #ff0000,
+        0 0 11px #ff0000,
+        0 0 19px #ff0000,
+        0 0 40px #ff6347,
+        0 0 80px #ff6347,
+        0 0 90px #ff6347,
+        0 0 100px #ff6347,
+        0 0 150px #ff6347;
+    
+    }
+    
+    0% {
+  
+     box-shadow:
+      0 0 2px #ff0000,
+      0 0 4px #ff0000,
+      0 0 6px #ff0000,
+      0 0 10px #ff6347,
+      0 0 45px #ff6347,
+      0 0 55px #ff6347,
+      0 0 70px #ff6347,
+      0 0 80px #ff6347;
+
+      text-shadow:
+      0 0 4px #ff0000,
+      0 0 11px #ff0000,
+      0 0 19px #ff0000,
+      0 0 40px #ff6347,
+      0 0 80px #ff6347,
+      0 0 90px #ff6347,
+      0 0 100px #ff6347,
+      0 0 150px #ff6347;
+  
+  }
+}
+/* プライマリーボタンここまで */
+
+/* secondaryボタンここから */
+.b4{
+    display: inline;
+    width: 160px;
+    height: 60px;
+    margin-left: 20px;
+    background-color: black;
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 3px solid #4169e1 ;
+    font-size: 15px;
+    color: #4169e1 ;
+}
+
+.b4 {
+    animation: b4 1.5s infinite alternate;     
+}
+@keyframes b4 {
+    
+    100% {
+  
+        box-shadow:
+        0 0 4px #0000ff,
+        0 0 11px #0000ff,
+        0 0 19px #0000ff,
+        0 0 40px #4169e1,
+        0 0 80px #4169e1,
+        0 0 90px #4169e1,
+        0 0 100px #4169e1,
+        0 0 150px #4169e1;
+        text-shadow:
+        0 0 4px #0000ff,
+        0 0 11px #0000ff,
+        0 0 19px #0000ff,
+        0 0 40px #4169e1,
+        0 0 80px #4169e1,
+        0 0 90px #4169e1,
+        0 0 100px #4169e1,
+        0 0 150px #4169e1;
+    
+    }
+    
+    0% {
+  
+     box-shadow:
+      0 0 2px #0000ff,
+      0 0 4px #0000ff,
+      0 0 6px #0000ff,
+      0 0 10px #4169e1,
+      0 0 45px #4169e1,
+      0 0 55px #4169e1,
+      0 0 70px #4169e1,
+      0 0 80px #4169e1;
+      text-shadow:
+      0 0 4px #0000ff,
+      0 0 11px #0000ff,
+      0 0 19px #0000ff,
+      0 0 40px #4169e1,
+      0 0 80px #4169e1,
+      0 0 90px #4169e1,
+      0 0 100px #4169e1,
+      0 0 150px #4169e1;
+  
+  }
+}
+/* secondaryボタンここまで */
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-large; 
+}
+.info{
+    border-collapse: collapse;
+    width: 330px;
+    height: 300px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #bc13fe,
+            0 0 0.8rem #bc13fe,
+            0 0 2.8rem #bc13fe,
+            inset 0 0 1.3rem #bc13fe; 
+    margin: 50px auto 0 auto;
+}
+.info th, .info td{	
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border: 5px solid #bc13fe;
+    text-align: center;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #bc13fe,
+            0 0 0.8rem #bc13fe,
+            0 0 2.8rem #bc13fe,
+            inset 0 0 1.3rem #bc13fe; 
+}
+.info td:hover{
+    background-color: lightblue;
+}
+.button{
+    width: 120px;
+    height: 100px;
+    font-size: 50px;
+    background-color: black;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    color: #0fa;
+}
+
+.button:hover{
+    background-color: #8a2be2;
+    border: solid 1px   #8a2be2;
+}
+.home-btn{
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    background-color: lightgray;
+    border-radius: 100px;
+    align-items: center;
+    top: 2%;
+    left: 2%;
+}
+#home-img{
+    display: flex;
+    width:30px; 
+    height:30px;
+    margin: 0 auto;
+}
+
+
