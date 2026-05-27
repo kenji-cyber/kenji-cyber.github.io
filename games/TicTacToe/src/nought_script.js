@@ -602,6 +602,6 @@ document.getElementById("O").addEventListener("click",function(){
 
 
 document.getElementById("home").addEventListener('click',function(){
-    location.href = "../../index.html";
+    location.href = "../../../index.html";
   });
   
