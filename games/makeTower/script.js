@@ -10,7 +10,7 @@ let blocks = { block1: { name: "block1", x: 0, y: 0, width: blockWidth, height: 
 let plusRemaining = 0, mainblock = null, gameStop = false, maxBlock = 12, minSize = 40;
 let linguage = "english", countBlock = 0, flagLimit = false, startBlockMove = null, image = null;
 let velocity = 10, enterButton = true, flag = true ,heart = 5 , maxHeart = 5;
-
+let firstClick = true;
 
     const linguages = {
     english: {
@@ -379,6 +379,7 @@ function gameoverfinish(){
         flagLimit = false;
         gameStop = false;
         enterButton = true;
+        firstClick = true;
         heart = maxHeart;
         if (painel = document.getElementById("painelInfo")) {
             painel.innerHTML = linguages[linguage].infoMake();
@@ -420,6 +421,7 @@ function resetGame(text) {
         flagLimit = false;
         gameStop = false;
         enterButton = true;
+        firstClick = true;
         if (painel = document.getElementById("painelInfo")) {
             painel.innerHTML = linguages[linguage].infoMake();
         }
@@ -488,6 +490,51 @@ function init() {
 
 let inputLocked = false;
 let gameReady = false; // init完了後にtrueになる
+ // 最初のクリックを識別するフラグ
+
+display.addEventListener("click", () => {
+    if (gameStop || inputLocked) return;
+    
+    if (firstClick) {
+        firstClick = false;
+        inputLocked = true;
+         enterButton = false;
+        document.getElementById("tittle").style.display = "none";
+
+        // 非同期でゲームを初期化し、完了後にフラグを立てる
+        init();
+        setTimeout(() => {
+            gameReady = true;
+            inputLocked = false;
+        }, 300); // 必要に応じてinit完了にかかる時間を調整
+        return; // 最初のクリックはここで処理を終える
+    }
+ 
+       
+        inputLocked = true; 
+        if (startBlockMove !== undefined) {
+            clearInterval(startBlockMove);
+            startBlockMove = undefined;
+        }
+        flagLimit = !flagLimit;
+
+        if (!gameStop) {
+
+            if (blockCount > 2) {
+                cutBlock();
+            } else {
+                countBlock++;
+                addBlock();
+                moveBlock();
+            }
+
+        
+        setTimeout(() => {
+            inputLocked = false;
+        }, 100); // 連打防止
+    }
+});
+
 
 window.addEventListener("keydown", function (event) {
     if (gameStop || inputLocked) return;
@@ -495,6 +542,7 @@ window.addEventListener("keydown", function (event) {
     if (event.code === "Enter" && enterButton) {
         inputLocked = true;
         enterButton = false;
+        firstClick = false;
         document.getElementById("tittle").style.display = "none";
 
         // 非同期でゲームを初期化し、完了後にフラグを立てる
